@@ -1,10 +1,11 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustSection from './components/TrustSection'
-import Services from './components/Services'
+import Features from './components/Features'
 import BeforeAfter from './components/BeforeAfter'
 import HowIWork from './components/HowIWork'
-import AboutTimeTech from './components/AboutTimeTech'
+import Pricing from './components/Pricing'
+import AboutKitia from './components/AboutKitia'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -16,10 +17,11 @@ export default function App() {
       <main>
         <Hero />
         <TrustSection />
-        <Services />
+        <Features />
         <BeforeAfter />
         <HowIWork />
-        <AboutTimeTech />
+        <Pricing />
+        <AboutKitia />
         <FAQ />
         <CTA />
       </main>

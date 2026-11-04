@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Kitia">
+  <defs>
+    <linearGradient id="kitia-mark" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C8F751" />
+      <stop offset="1" stop-color="#4FE3C1" />
+    </linearGradient>
+  </defs>
+  <path d="M16 8h32a8 8 0 0 1 8 8v24a8 8 0 0 1-8 8H32l-12 10V48h-4a8 8 0 0 1-8-8V16a8 8 0 0 1 8-8Z" fill="url(#kitia-mark)" />
+  <path d="M26 21v22M26 32l10-11M26 32l11 11" stroke="#08090A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

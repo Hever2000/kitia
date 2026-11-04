@@ -1,4 +1,4 @@
-# TimeTech Landing — Agent Guidelines
+# Kitia Landing — Agent Guidelines
 
 ## Build / Lint / Dev Commands
 
@@ -29,17 +29,18 @@ src/
 ├── components/
 │   ├── Navbar.jsx
 │   ├── Hero.jsx
-│   ├── TechStack.jsx
+│   ├── TrustSection.jsx
+│   ├── Features.jsx
 │   ├── BeforeAfter.jsx
-│   ├── Services.jsx
 │   ├── HowIWork.jsx
-│   ├── AboutTimeTech.jsx
+│   ├── Pricing.jsx
+│   ├── AboutKitia.jsx
 │   ├── FAQ.jsx
 │   ├── CTA.jsx
 │   └── Footer.jsx
 ├── App.jsx         # Root component — assembles all sections
 ├── index.css       # Tailwind imports + @theme custom design tokens
-├── data.js         # All static content (services, FAQs, tech stack, etc.)
+├── data.js         # All static content (features, pricing, FAQs, channels, etc.)
 └── main.jsx        # Entry point
 ```
 
@@ -56,7 +57,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 
 import Navbar from './components/Navbar'
-import { SERVICES } from './data'
+import { FEATURES } from '../data'
 ```
 
 ### Exports
@@ -83,7 +84,7 @@ export default function ComponentName() {
 - **Files**: PascalCase matching the component name (`Navbar.jsx`, `HowIWork.jsx`)
 - **Variables/functions**: camelCase (`isInView`, `mobileOpen`, `setScrolled`)
 - **Constants**: UPPER_SNAKE for magic values, PascalCase for data arrays of objects
-- **Data arrays**: UPPER_SNAKE when defined locally (`NAV_LINKS`, `FAQS`, `SERVICES`)
+- **Data arrays**: UPPER_SNAKE when defined locally (`NAV_LINKS`, `FAQS`, `FEATURES`)
 - **CSS classes**: Tailwind utility classes only — no custom CSS class names
 - **Event handlers**: `onToggle`, `onClick`, `handleXxx` pattern
 
@@ -101,16 +102,17 @@ All custom design tokens are defined in `src/index.css` via `@theme`:
 
 ```css
 @theme {
-  --color-bg: #0B0F14;
-  --color-surface: #111827;
-  --color-accent: #06D6A0;
-  --color-accent-light: #2DD4B8;
-  --color-accent-glow: rgba(6, 214, 160, 0.15);
-  --color-text: #F9FAFB;
-  --color-text-secondary: #9CA3AF;
+  --color-bg: #08090A;
+  --color-surface: #111315;
+  --color-accent: #C8F751;
+  --color-accent-light: #DAFF7A;
+  --color-accent-2: #4FE3C1;
+  --color-accent-glow: rgba(200, 247, 81, 0.16);
+  --color-text: #F5F6F1;
+  --color-text-secondary: #9BA1A0;
   --color-border: rgba(255, 255, 255, 0.08);
-  --font-sans: 'Inter', ...;
-  --font-display: 'Satoshi', ...;
+  --font-sans: 'DM Sans', ...;
+  --font-display: 'Bricolage Grotesque', ...;
 }
 ```
 
@@ -135,7 +137,7 @@ const isInView = useInView(ref, { once: true, margin: '-100px' })
 >
 ```
 
-**Staggered children**: Use `delay: i * 0.08` (services grid) or `delay: i * 0.15` (step cards).
+**Staggered children**: Use `delay: i * 0.08` (features grid) or `delay: i * 0.15` (step cards).
 
 **Accordion pattern** (used in FAQ):
 ```jsx

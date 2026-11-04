@@ -1,81 +1,195 @@
 export const NAV_LINKS = [
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Metodología', href: '#metodologia' },
+  { label: 'Producto', href: '#producto' },
+  { label: 'Cómo funciona', href: '#como-funciona' },
+  { label: 'Precios', href: '#precios' },
   { label: 'FAQ', href: '#faq' },
 ]
 
-export const SERVICES = [
+export const CHANNELS = [
+  'WhatsApp',
+  'Web Chat',
+  'Telegram',
+  'Instagram',
+  'Messenger',
+  'Slack',
+  'HubSpot',
+  'Salesforce',
+  'Shopify',
+  'Zapier',
+  'Google Sheets',
+  'Notion',
+]
+
+export const FEATURES = [
   {
-    title: 'Chatbots con IA',
-    desc: 'Atención al cliente 24/7, generación de leads y agendamiento automatizado vía WhatsApp y web. Tus clientes siempre atendidos al instante.',
-    benefit: 'Clientes atendidos al instante, sin demoras',
+    icon: 'bolt',
+    title: 'Respuestas instantáneas con IA',
+    desc: 'Kitia entiende la intención, consulta tu base de conocimiento y responde en segundos con el tono de tu marca.',
+    tag: '24/7',
   },
   {
-    title: 'Páginas Web Profesionales',
-    desc: 'Landing pages, sitios corporativos y dashboards con diseño moderno y optimización para conversión. Tu negocio online con presencia profesional.',
-    benefit: 'Presencia online que convierte visitas en clientes',
+    icon: 'channels',
+    title: 'Integración multi-canal',
+    desc: 'WhatsApp, web, Telegram, Instagram y más. Un solo cerebro de IA para todas tus conversaciones.',
+    tag: '5+ canales',
   },
   {
-    title: 'Automatización de Procesos',
-    desc: 'Workflows inteligentes que eliminan tareas repetitivas: facturación automática, reportes, conciliaciones y más. Tu equipo enfocado en lo estratégico.',
-    benefit: 'Tu equipo dedicado a lo que realmente importa',
+    icon: 'analytics',
+    title: 'Dashboard de analíticas',
+    desc: 'Conversaciones, intenciones, resolución y satisfacción en tiempo real. Decidí con datos, no con intuición.',
+    tag: 'Tiempo real',
   },
   {
-    title: 'Integración de Sistemas',
-    desc: 'Conectamos CRMs, ERPs, APIs y las herramientas que ya usás. Todos tus sistemas trabajando juntos sin fricción ni datos duplicados.',
-    benefit: 'Todos tus sistemas sincronizados y fluyendo',
+    icon: 'handoff',
+    title: 'Transferencia a agentes humanos',
+    desc: 'Cuando la conversación lo necesita, Kitia deriva con todo el contexto a la persona indicada. Sin repetir información.',
+    tag: 'Handoff',
+  },
+]
+
+export const BEFORE_ITEMS = [
+  'Horas respondiendo las mismas preguntas',
+  'Leads que se enfrían fuera de horario',
+  'Clientes esperando en tres canales a la vez',
+  'Equipo saturado en picos de demanda',
+  'Conversaciones que nadie mide ni aprovecha',
+]
+
+export const AFTER_ITEMS = [
+  'IA resolviendo consultas en segundos',
+  'Captura de leads 24/7, incluso sin agentes',
+  'Una sola bandeja para todos los canales',
+  'Tu equipo enfocado en casos de alto valor',
+  'Analíticas claras de cada conversación',
+]
+
+export const STEPS = [
+  {
+    number: '01',
+    title: 'Conectá tus canales',
+    desc: 'Sumá WhatsApp, tu web o Telegram en minutos. Sin código, sin migrar tus sistemas y sin frenar tu operación.',
   },
   {
-    title: 'Sistemas a Medida',
-    desc: 'Software custom diseñado desde cero para resolver los problemas específicos de tu operación. Ni más ni menos de lo que necesitás.',
-    benefit: 'La solución exacta para tu operación',
+    number: '02',
+    title: 'Entrená tu bot',
+    desc: 'Importá tu sitio, PDFs o base de conocimiento. Kitia aprende tu negocio, tus productos y tu forma de hablar.',
   },
   {
-    title: 'Dashboards y Reportes',
-    desc: 'Visualización de datos en tiempo real para tomar decisiones informadas al instante. Tu negocio medido y controlado desde un solo lugar.',
-    benefit: 'Decisiones basadas en datos, siempre',
+    number: '03',
+    title: 'Activá y desplegá',
+    desc: 'Probá el bot en un entorno seguro, definí las reglas de derivación y publicalo cuando esté listo.',
+  },
+  {
+    number: '04',
+    title: 'Medí y optimizá',
+    desc: 'Seguí conversaciones, resoluciones y satisfacción. Kitia mejora con cada interacción y tu equipo también.',
+  },
+]
+
+export const VALUES = [
+  {
+    title: 'Automatización con criterio',
+    desc: 'La IA resuelve lo repetitivo; las personas se quedan con lo que requiere empatía y decisión.',
+  },
+  {
+    title: 'Implementación sin fricción',
+    desc: 'Sin proyectos eternos ni equipos técnicos dedicados. Kitia se integra a tu operación en días, no en meses.',
+  },
+  {
+    title: 'Tus datos, siempre tuyos',
+    desc: 'Infraestructura segura, cifrado de punta a punta y control total sobre lo que aprende tu bot.',
+  },
+]
+
+export const STATS = [
+  { number: '24/7', label: 'Atención sin pausas' },
+  { number: '<10s', label: 'Respuesta promedio' },
+  { number: '40+', label: 'Integraciones' },
+  { number: '99.9%', label: 'Uptime' },
+]
+
+export const PRICING_PLANS = [
+  {
+    name: 'Starter',
+    priceMonthly: 0,
+    priceAnnual: 0,
+    desc: 'Probá Kitia y automatizá tus primeras conversaciones.',
+    cta: 'Empezá gratis',
+    highlight: false,
+    features: [
+      '1 chatbot activo',
+      '100 conversaciones por mes',
+      'Chat web',
+      'Entrenamiento con 20 páginas',
+      'Analíticas básicas',
+      'Soporte por email',
+    ],
+  },
+  {
+    name: 'Growth',
+    priceMonthly: 79,
+    priceAnnual: 59,
+    desc: 'Para equipos que escalan soporte y ventas sin sumar headcount.',
+    cta: 'Probar 14 días gratis',
+    highlight: true,
+    features: [
+      '5 chatbots activos',
+      '3.000 conversaciones por mes',
+      'WhatsApp, Telegram y Web',
+      'Entrenamiento ilimitado',
+      'Transferencia a agentes humanos',
+      'Integraciones con CRM',
+      'Analíticas avanzadas',
+      'Soporte prioritario',
+    ],
+  },
+  {
+    name: 'Enterprise',
+    priceMonthly: null,
+    priceAnnual: null,
+    desc: 'Operaciones grandes con necesidades, volumen y seguridad propios.',
+    cta: 'Hablemos',
+    highlight: false,
+    features: [
+      'Chatbots ilimitados',
+      'Conversaciones a medida',
+      'SSO y control de roles',
+      'Onboarding dedicado',
+      'SLA 99.9%',
+      'Integraciones custom',
+      'Seguridad avanzada',
+      'Soporte 24/7',
+    ],
   },
 ]
 
 export const FAQS = [
   {
-    q: '¿Qué tipo de proyectos hacen?',
-    a: 'Todo tipo de soluciones de software: chatbots con IA, páginas web, automatizaciones, integraciones entre sistemas, dashboards y desarrollo a medida. Si tu problema se resuelve con software, lo construimos.',
+    q: '¿Cuánto tarda la implementación?',
+    a: 'La mayoría de los equipos publica su primer bot en menos de una semana. Conectás un canal, cargás tu base de conocimiento y revisás las respuestas antes de activarlo.',
   },
   {
-    q: '¿Trabajan con empresas argentinas?',
-    a: 'Sí, nuestro foco principal son pymes y empresas argentinas. Conocemos el contexto local, los desafíos operativos del día a día y las herramientas que se usan acá.',
+    q: '¿En qué canales funciona Kitia?',
+    a: 'WhatsApp, chat web, Telegram, Instagram y Messenger, además de integraciones vía API con Slack, HubSpot, Salesforce, Shopify, Google Sheets y Zapier.',
   },
   {
-    q: '¿Cuánto tiempo toma desarrollar un proyecto?',
-    a: 'Depende de la complejidad. Una landing page puede estar lista en días, mientras que un sistema a medida puede llevar semanas. En el diagnóstico inicial te damos un timeline claro y realista.',
+    q: '¿Cómo aprende el bot sobre mi negocio?',
+    a: 'Podés importar tu sitio web, documentos, FAQs y catálogos. Kitia usa esa información para responder con precisión y con el tono de tu marca. También podés corregir respuestas y agregar instrucciones cuando quieras.',
   },
   {
-    q: '¿Las soluciones son personalizadas?',
-    a: 'Siempre. Cada proyecto se diseña desde cero para tu operación específica. No vendemos plantillas genéricas — cada solución es única porque cada negocio también lo es.',
+    q: '¿Qué pasa si el bot no sabe responder?',
+    a: 'Deriva automáticamente a un agente humano con todo el contexto de la conversación. Definís las reglas por tema, horario, tipo de cliente o nivel de confianza de la IA.',
   },
   {
-    q: '¿Necesito conocimientos técnicos para trabajar con ustedes?',
-    a: 'Para nada. Nosotros nos encargamos de todo: diagnóstico, desarrollo, implementación y soporte. Solo necesitás contarnos tu problema y definir los objetivos con nosotros.',
+    q: '¿Se integra con mi CRM?',
+    a: 'Sí. Kitia se conecta con HubSpot, Salesforce, Pipedrive y otros vía API o Zapier para crear leads, actualizar contactos y registrar conversaciones sin trabajo manual.',
   },
   {
-    q: '¿Dan mantenimiento después de entregar?',
-    a: 'Sí. Ofrecemos planes de soporte y mantenimiento continuo para garantizar que el software funcione siempre al 100%. Nos ocupamos de actualizaciones, monitoreo y ajustes.',
+    q: '¿Mis datos están seguros?',
+    a: 'Ciframos los datos en tránsito y en reposo, aplicamos control de acceso por roles y no usamos tu información para entrenar modelos de terceros. Los planes Enterprise incluyen SSO y residencia de datos.',
   },
-]
-
-export const BEFORE_ITEMS = [
-  'Tareas manuales que consumen horas del equipo',
-  'Sistemas desconectados que generan caos',
-  'Clientes esperando respuestas sin seguimiento',
-  'Datos dispersos que nadie logra interpretar',
-  'Oportunidades perdidas por falta de herramientas',
-]
-
-export const AFTER_ITEMS = [
-  'Procesos automatizados que trabajan 24/7',
-  'Todos tus sistemas integrados y sincronizados',
-  'Clientes atendidos al instante con IA',
-  'Información clara y centralizada para decidir',
-  'Herramientas diseñadas para hacer crecer tu negocio',
+  {
+    q: '¿Hay una prueba gratis?',
+    a: 'Sí. El plan Starter es gratis para siempre y los planes pagos incluyen 14 días de prueba sin tarjeta de crédito.',
+  },
 ]

@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const NAV_LINKS = [
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Metodología', href: '#metodologia' },
-  { label: 'FAQ', href: '#faq' },
-]
+import { NAV_LINKS } from '../data'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -26,14 +22,14 @@ export default function Navbar() {
         mobileOpen
           ? 'bg-bg'
           : scrolled
-            ? 'bg-bg/70 backdrop-blur-xl border-b border-accent/10'
+            ? 'bg-bg/70 backdrop-blur-xl border-b border-border'
             : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
-        <a href="#" className="font-display text-lg font-medium tracking-tight flex items-center gap-2">
-          <img src="/logo-timetech.PNG" alt="" className="h-6 w-auto" />
-          <span className="text-text">TIMETECH</span>
+        <a href="#" className="font-display text-lg font-semibold tracking-tight flex items-center gap-2.5">
+          <img src="/images/logo-kitia.svg" alt="" className="h-7 w-auto" />
+          <span className="text-text">KITIA</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -47,17 +43,18 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contacto"
-            className="text-sm font-medium text-accent border border-accent/40 hover:bg-accent hover:text-bg px-5 py-2 rounded-full transition-all duration-300"
+            href="#precios"
+            className="text-sm font-medium text-bg bg-accent hover:bg-accent-light px-5 py-2.5 rounded-full transition-all duration-300"
           >
-            Hablemos
+            Empezá gratis
           </a>
         </div>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden flex flex-col items-center justify-center w-9 h-9 gap-[3px]"
-          aria-label="Menú"
+          aria-label="Abrir menú"
+          aria-expanded={mobileOpen}
         >
           <span
             className={`w-[18px] h-[2px] bg-text rounded transition-all duration-300 ${
@@ -96,13 +93,13 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <div className="mt-8 pt-8 border-t border-accent/20">
+              <div className="mt-8 pt-8 border-t border-border">
                 <a
-                  href="#contacto"
+                  href="#precios"
                   onClick={() => setMobileOpen(false)}
                   className="inline-block text-sm font-medium bg-accent text-bg px-6 py-3 rounded-full transition-all"
                 >
-                  Hablemos
+                  Empezá gratis
                 </a>
               </div>
             </div>

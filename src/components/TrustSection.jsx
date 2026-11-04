@@ -1,32 +1,33 @@
 import { motion } from 'framer-motion'
 
-const TECH_STACK = [
-  'React', 'Node.js', 'Python', 'PostgreSQL',
-  'TypeScript', 'Docker', 'AWS', 'TailwindCSS',
-  'Next.js', 'FastAPI',
-]
+import { CHANNELS } from '../data'
 
 export default function TrustSection() {
-  const duplicated = [...TECH_STACK, ...TECH_STACK]
+  const duplicated = [...CHANNELS, ...CHANNELS]
 
   return (
-    <section className="border-t border-accent/10 py-20 overflow-hidden">
-      <div className="[mask-image:linear-gradient(to_right,transparent_0%,black_5%,black_95%,transparent_100%)]">
+    <section className="border-y border-border py-14">
+      <p className="mb-8 text-center text-[11px] uppercase tracking-[0.22em] text-text-secondary/70">
+        Integraciones nativas con las herramientas que ya usás
+      </p>
+
+      <div className="[mask-image:linear-gradient(to_right,transparent_0%,black_8%,black_92%,transparent_100%)]">
         <motion.div
-          className="flex gap-16"
+          className="flex w-max"
           animate={{ x: ['-50%', '0%'] }}
           transition={{
-            duration: 8,
+            duration: 28,
             ease: 'linear',
             repeat: Infinity,
           }}
         >
-          {duplicated.map((tech, i) => (
+          {duplicated.map((channel, i) => (
             <span
-              key={`${tech}-${i}`}
-              className="shrink-0 text-xl font-bold text-text-secondary select-none"
+              key={`${channel}-${i}`}
+              className="mr-3 inline-flex shrink-0 items-center gap-2 rounded-full border border-border bg-white/[0.02] px-5 py-2 text-sm text-text-secondary select-none"
             >
-              {tech}
+              <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
+              {channel}
             </span>
           ))}
         </motion.div>
